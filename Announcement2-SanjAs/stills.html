@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="movie.css">
+	<link rel="stylesheet" type="text/css" href="candcrew.css">
+	<link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Cinzel:900|Courgette" rel="stylesheet">
+</head>
+<body>
+<header>
+		<ul>
+			<li><a href="index.html">About</a></li>
+			<li><a href="cast.html">Cast</a></li>
+			<li><a href="stills.html">Stills</a></li>
+		</ul>	
+</header>
+<div class="parent">
+	<div id="title">
+		<div class="let">P</div>
+		<div class="let">I</div>
+		<div class="let">N</div>
+		<div class="let">K</div>
+	</div>
+<div class="move">	
+	<img class="pic" src="image1.jpg">
+	<img class="pic" src="image2.jpg">
+	<img class="pic" src="image3.jpg">
+	<img class="pic" src="image4.jpg">	
+	<img class="pic" src="image6.jpg">
+</div>	
+
+    <a class="back-button" onclick="plusDivs(-1)">&#10094;</a>
+
+    <a class="forward-button" onclick="plusDivs(+1)">&#10095;</a>
+
+<script type="text/javascript">
+
+
+    var imagesIndex = 1;
+    showDivs(imagesIndex);
+
+    function plusDivs(n) {
+        showDivs(imagesIndex += n);
+    }
+
+    function showDivs(n) {
+
+        var i;
+        var x = document.getElementsByClassName("pic");
+        if (n > x.length) {imagesIndex = 1}
+            if (n < 1) {imagesIndex = x.length}
+                var i = 0
+                while (i < x.length) {
+                    x[i].style.display = "none";
+                    i += 1;
+                }
+                x[imagesIndex-1].style.display = "block";
+    }
+</script>
+</div><h4>THIS MOVIE IS A BLAZING INDICTMENT OF ALL THAT'S WRONG WITH US.</h4></div>
+
+<footer><h2>© Sanjaya</h2></footer>
+</body>
+</html>
